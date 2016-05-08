@@ -38,26 +38,26 @@ namespace Prokil
             System.Timers.Timer detect = new System.Timers.Timer();
             detect.Interval = 1000;
             detect.Elapsed += detecting;
-            MessageBox.Show("1");
+            
             SetAutoRun();
-            MessageBox.Show("2");
+            
             if (File.Exists(GetAppPath() + "cpg.xml"))
             {
                 listView1.Items.Clear();
                 Readdata();
-                MessageBox.Show("3");
+                
             }
             
             RDConInfo();
-            MessageBox.Show("4");
+            
             if (needcontrol)
             {
                 startcontrol();
             }
-            MessageBox.Show("5");
+            
             detect.Start();
             this.Hide();
-            MessageBox.Show("6");
+            
             //KProtectProcess.KProcess.SelfProtection();
 
         }
